@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-2</title>
+</head>
+<body>
+
+    <ul>
+        <li>one</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <!-- create html element in javascript -->
+    <script>
+        // Append child
+
+        let title=document.createElement("h1");
+        // class name
+        title.className='js-class';
+        // give CSS
+        title.style.fontSize="30px";
+        title.style.textAlign="center";
+
+        // give text inside h1 tag
+        title.textContent="JavaScript Element";
+        console.log(title);
+
+        // but not show in body so we use appendChild()
+        // show in body
+        document.body.appendChild(title);//body->parent, title->child
+
+        
+        
+        // Remove child
+
+        // select ul
+        let ul=document.querySelector("ul");
+        console.log(ul);
+
+        // select list
+        // let lists = document.querySelector('li'); //Note:- but here only  select one list 
+        // console.log(lists);
+
+        // select all list
+
+        let lists = document.querySelectorAll('li');
+        console.log(lists);
+
+        for(list of lists)
+        {
+            ul.removeChild(list);
+        }
+
+        
+
+
+
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-1</title>
+</head>
+<body>
+
+    <!-- id -->
+    <p id="one"><span>hello</span> this is p tag</p>
+
+    <!-- class -->
+    <ul>
+        <li class="tech">one</li> 
+        <li class="tech">two</li>
+        <li class="tech">three</li>
+    </ul>
+
+    <!-- tag name -->
+    <h4>one</h4>
+    <h4>two</h4>
+    <h4>three</h4>
+
+    <!-- Query Selector -->
+    <h2>hello</h2>
+    <h2 class="class">Namste</h2>
+    <h2 id="id">hii</h2>
+
+
+    <!-- DOM->Document Object Model -->
+    <!-- link js file -->
+    <script>
+        // by id name
+        let var1=document.getElementById('one');
+        console.log(var1);
+
+        console.log(var1.innerText); //output-> hello this is p tag
+
+        console.log(var1.innerHTML); //output-> <span>hello</span> this is p tag
+
+        //class class name
+        let var2=document.getElementsByClassName('tech');
+        console.log(var2);
+
+        //  if we want get only list which is name three.
+
+        console.log(var2[2].innerHTML); //output->three
+       
+        //    we can change  text or innerHTML
+
+        var2[2].innerText='nodejs';
+        var2[1].innerHTML='javascript';
+     
+
+        //by tag name  
+         let var3=document.getElementsByTagName('h4');
+         console.log(var3[0].innerText);
+
+         var3[2].innerText='hello';
+         
+        //  change color
+        var3[1].style.color='red';
+        var2[1].style.color='green';
+
+        //Query Selector-> in query selector you can choose tag/class name/id name
+        let var4=document.querySelector('.class');
+        console.log(var4);
+
+        // we can change  class name or id name.
+         
+        // give only one name
+        var4.className='change-class'; //<h2 class="change-class">Namste</h2>
+        // give multiple class name
+        var4.classList="class1 class2 class3";
+
+        // give attribiue
+        var4.setAttribute('title',"greet");//(attribute,value)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
