@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html -->
+    <h1>Hello Student</h1>
+    <p id="js"></p>
+
+    <button id="jss" onclick="hey()">LOGIN</button>
+
+    <!-- javaScript -->
+    <script>
+        document.addEventListener("click",hello);
+        // document->complete page
+        function hello(){
+            document.getElementById('js').innerText="Namste";
+        }
+        function hey()
+        {
+            document.getElementById('jss').innerText="Log Out";
+            document.getElementById('jss').style.color='red';
+
+            document.getElementById('jss').style.backgroundColor="black";
+
+        }
+    </script>
+</body>
+</html>
