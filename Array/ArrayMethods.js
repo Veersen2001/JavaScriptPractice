@@ -54,7 +54,7 @@ let arr = [1,2,3,4,5,6,7];
 // if we add in array element
 arr.splice(2,3,12);
 console.log(arr);
-// syntax of splice->splice( index insert element, give delete element number ,insert element)
+// syntax of splice->splice( index insert element, how many element deleted ,insert element)
 
 var sum=0;
 var array=[10,15,20,30];
